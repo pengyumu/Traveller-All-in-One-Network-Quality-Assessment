@@ -1,19 +1,19 @@
 # Traveller-All-in-One-Network-Quality-Assessment
 
-📖 Introduction
+📖 **Introduction**
 
 Traveller is a Client/Server (C/S) based distributed system designed for real-time network quality assessment and monitoring.
 It provides multi-layer probes (ICMP, TCP, L7, MTR), intelligent task scheduling, data aggregation, and alerting.
 The system helps upper-layer applications improve stability, availability, and user experience by guiding traffic through the best quality network paths.
 
-🏗️ Key Component
+🏗️ **Key Component**
 Client (Agent)
 
--Pulls probe tasks from Manager via HTTP
+- Pulls probe tasks from Manager via HTTP
 
--Executes probes (ICMP / TCP / L7 / MTR)
+- Executes probes (ICMP / TCP / L7 / MTR)
 
--Compresses and reports results to MQ
+- Compresses and reports results to MQ
 
 Manager (Server)
 
