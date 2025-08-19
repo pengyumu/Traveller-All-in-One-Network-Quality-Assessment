@@ -7,6 +7,7 @@ It provides multi-layer probes (ICMP, TCP, L7, MTR), intelligent task scheduling
 The system helps upper-layer applications improve stability, availability, and user experience by guiding traffic through the best quality network paths.
 
 🏗️ **Key Component**
+
 Client (Agent)
 
 - Pulls probe tasks from Manager via HTTP
@@ -17,37 +18,37 @@ Client (Agent)
 
 Manager (Server)
 
--Splits & assigns probe tasks
+- Splits & assigns probe tasks
 
--Aggregates & analyzes results
+- Aggregates & analyzes results
 
--Stores metadata in MySQL
+- Stores metadata in MySQL
 
--Publishes probe results to MQ
+- Publishes probe results to MQ
 
 Message Queue (MQ)
 
--Decouples data producers (clients) and consumers (storages, alerting)
+- Decouples data producers (clients) and consumers (storages, alerting)
 
--Buffers probe results, supports retry & backpressure
+- Buffers probe results, supports retry & backpressure
 
--Provides two data paths:
+- Provides two data paths:
 
---5s updates → ClickHouse → Grafana (real-time visualization)
+- 5s updates → ClickHouse → Grafana (real-time visualization)
 
---10min updates → MySQL (metadata storage)
+- 10min updates → MySQL (metadata storage)
 
 ClickHouse
 
--High-performance time-series storage for probe results
+- High-performance time-series storage for probe results
 
--Supports efficient query & analytics
+- Supports efficient query & analytics
 
 Prometheus + Alertmanager
 
--Monitors probe metrics (loss rate, RTT, availability)
+- Monitors probe metrics (loss rate, RTT, availability)
 
--Triggers alerts when thresholds are exceeded
+- Triggers alerts when thresholds are exceeded
 
 Grafana
 
