@@ -34,9 +34,9 @@ Message Queue (MQ)
 
 - Provides two data paths:
 
-- 5s updates → ClickHouse → Grafana (real-time visualization)
+  - 5s updates → ClickHouse → Grafana (real-time visualization)
 
-- 10min updates → MySQL (metadata storage)
+  - 10min updates → MySQL (metadata storage)
 
 ClickHouse
 
