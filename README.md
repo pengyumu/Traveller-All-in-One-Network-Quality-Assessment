@@ -57,3 +57,25 @@ Grafana
 MySQL
 
 - Stores task-related metadata (task definition, status, timestamps)
+
+🔑 **Core Features**
+
+- Multi-layer probing:
+
+  - ICMP: connectivity, RTT, packet loss
+
+  - TCP: port reachability, handshake delay
+
+  - L7: HTTP/HTTPS first-byte analysis
+
+  - MTR: ASN & peer detection along path
+
+- Real-time monitoring & alerting
+
+- Data compression (RTT 2B, loss rate 1B → 3B per node pair)
+
+- Task scheduling & distributed execution
+
+- Aggregated reporting with 5s/10min intervals
+
+- Horizontal scalability with 1000+ nodes across regions (e.g. SEA, Europe)
