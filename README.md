@@ -52,8 +52,8 @@ Prometheus + Alertmanager
 
 Grafana
 
-Real-time dashboard for visualization
+- Real-time dashboard for visualization
 
 MySQL
 
-Stores task-related metadata (task definition, status, timestamps)
+- Stores task-related metadata (task definition, status, timestamps)
